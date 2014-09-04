@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=street\ avenue\ facing\ beepers
+comment0.target=KarelPlusPlus(int,\ int,\ kareltherobot.Directions.Direction,\ int)
+comment1.params=
+comment1.target=void\ turnRight()
+comment10.params=
+comment10.target=int\ countWidth()
+comment2.params=target
+comment2.target=void\ face(KarelPlusPlus.Direction)
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=target
+comment4.target=boolean\ move(KarelPlusPlus.Direction)
+comment5.params=target\ times
+comment5.target=int\ move(KarelPlusPlus.Direction,\ int)
+comment6.params=targetX\ targetY
+comment6.target=boolean\ moveTo(int,\ int)
+comment7.params=x\ y
+comment7.target=boolean\ putBeeperAt(int,\ int)
+comment8.params=target
+comment8.target=void\ go(KarelPlusPlus.Direction)
+comment9.params=
+comment9.target=int\ countHeight()
+numComments=11
