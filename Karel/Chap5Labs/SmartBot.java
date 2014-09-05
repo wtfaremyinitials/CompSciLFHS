@@ -19,6 +19,11 @@ public class SmartBot extends CountBot
         turnLeft();
     }
     
+    public void turnAround() {
+        turnLeft();
+        turnLeft();
+    }
+    
     /*
      * verifies that there is a wall to left
      */
@@ -92,6 +97,7 @@ public class SmartBot extends CountBot
      */
     public boolean isWayBlocked()
     {
+        
         Direction start = getCurrentDirection();
         boolean blocked = true;
         
@@ -99,14 +105,39 @@ public class SmartBot extends CountBot
         if(frontIsClear())
            blocked = false;
         turnLeft();
-        turnLeft();
         if(frontIsClear())
            blocked = false;
         turnLeft();
         if(frontIsClear())
            blocked = false;
-           
+        
+       turnLeft();   
+       if(!frontIsClear() && blocked) {
+           faceDirection(start);
+           turnOff();
+           return blocked;
+       }
+        
         faceDirection(start);
         return blocked;
+    }
+    
+    /*
+     * Carpet rooms
+     */
+    public void carpetRooms() {
+        for(int i=0; i<9; i++)
+             carpetRoom();
+    }
+    
+    public void carpetRoom() {
+        turnLeft();
+        move();
+        if(isWayBlocked())
+            putBeeper();
+        turnAround();
+        move();
+        turnLeft();
+        move();
     }
 }

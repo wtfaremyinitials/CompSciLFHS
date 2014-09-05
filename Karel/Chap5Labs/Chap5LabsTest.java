@@ -110,7 +110,7 @@ public class Chap5LabsTest extends KJRTest implements Directions
     {   
         World.reset();
         SmartBot karel = new SmartBot(1, 1, East, 100);
-
+        karel.carpetRooms();
     }
 
 
